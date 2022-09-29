@@ -2,10 +2,15 @@
 	"name": "opendatadsl-community",
 	"publisher": "Walkfares",
 	"displayName": "OpenDataDSL Community",
+	"license": "LGPL",
 	"icon": "logo.png",
 	"description": "The development environment for OpenDataDSL (Community Version)",
 	"version": "0.0.6",
 	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OpenDataDSL/community-vsc-extension"
+	},
 	"activationEvents": [
 		"onLanguage:odsl"
 	],
