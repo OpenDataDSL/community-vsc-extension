@@ -1,0 +1,1 @@
+java -cp odsl-community.jar com.walkfares.odsl.CLI %*

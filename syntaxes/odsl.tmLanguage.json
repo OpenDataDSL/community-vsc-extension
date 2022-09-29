@@ -1,0 +1,117 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.odsl",
+	"name": "OpenDSL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#active-var-initializer"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"match": "\\bobject\\s*as.*\\b",
+					"name": "variable.language"
+				},
+				{
+					"match": ",",
+					"name": "keyword.other.comma"
+				},
+				{
+					"match": "\\b(phase|function|public|private)\\b",
+					"name": "storage.modifier"
+				},
+				{
+					"match": "\\b(null|true|false)\\b",
+					"name": "constant.numeric"
+				},
+				{
+					"match": "(?x)\n(?<!\\$)\n(\n  \\b[0-9]([0-9_]*[0-9])?\\.\\B(?!\\.)\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([0-9]([0-9_]*[0-9])?)([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  (?<!\\.)\\B\\.[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b(0|[1-9]([0-9_]*[0-9])?)(?!\\.)[Ll]?\\b\n)\n(?!\\$)",
+					"name": "constant.numeric.decimal"
+				},
+				{
+					"match": "\\b(delete|else|elseif|end|error|find|for|if|in|log|next|on|print|rename|return|run|save|send|set|step|tag|then|to|type|use|while)\\b",
+					"name": "keyword.control"
+				},
+				{
+					"match": "\\b(abort|delay|external|fail|reschedule|retries)\\b",
+					"name": "keyword.control.phase"
+				},
+				{
+					"match": "\\b(as|clear|create|on error|ignore|into|object|rows|transform|unique|where|project|order by|asc|desc)\\b",
+					"name": "keyword.control.transformer"
+				},
+				{
+					"match": "\\b(extract|from)\\b",
+					"name": "keyword.control.extract"
+				},
+				{
+					"match": "\\b(fill|param|select|check|uncheck|click)\\b",
+					"name": "keyword.other.extract"
+				},
+				{
+					"match": "\\b(aggregate|addFields|bucket|bucketAuto|count|documents|match|project|group|sort|sortByCount|limit|skip|geoNear|sample|lookup|graphLookup|merge|out|replaceRoot|replaceWith|unwind|facet)\\b",
+					"name": "keyword.control.aggregate"
+				},
+				{
+					"match": "\\b(boundaries|buckets|constraint|default|distanceField|from|foreignField|localField|mark|output|with|buckets|granularity|near|into|on|let|query|spherical)\\b",
+					"name": "keyword.other.general"
+				}
+			]
+		},
+		"active-var-initializer": {
+			"patterns": [
+				{
+					"begin": "\\${",
+					"end": "}",
+					"name": "variable.language"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.odsl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.odsl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "//#region",
+					"end": "$",
+					"name": "markup.heading"
+				},
+				{
+					"begin": "//#endregion",
+					"end": "$",
+					"name": "markup.heading"
+				},
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block"
+				},
+				{
+					"begin": "//",
+					"end": "$",
+					"name": "comment.line"
+				}
+			]
+		}
+	}
+}
