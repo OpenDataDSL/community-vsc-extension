@@ -50,8 +50,8 @@ export async function activate(context: vscode.ExtensionContext) {
         if (!is_ready) {
             channel.appendLine("Running OpenDataDSL process");
             shell.cd(context.extensionPath + "/dist");
-            var validate = "validate.bat";
-            var script = "debug_adapter_windows.bat";
+            var validate = "./validate.bat";
+            var script = "./debug_adapter_windows.bat";
 
             shell.exec(validate, function(code: any, stdout: any, stderr: any) {
                 channel.appendLine("code: " + code);
