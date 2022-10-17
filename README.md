@@ -1,6 +1,10 @@
-# OpenDataDSL
+# MongoDB 4GL Language
 
-The development environment for OpenDataDSL scripts
+OpenDataDSL is a 4GL language that helps you make the most out of your MongoDB project.
+
+> Get started today using the **FREE** community version
+>
+> Upgrade to the **commercial** version to get an Excel Add-in and Web Portal to manage and visualise your MongoDB data.
 
 # Requirements
 

@@ -23,7 +23,8 @@
 		"Programming Languages"
 	],
 	"keywords": [
-		"odsl"
+		"odsl",
+		"MongoDB"
 	],
 	"contributes": {
 		"menus": {
