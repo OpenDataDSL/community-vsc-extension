@@ -52,8 +52,8 @@ All Standard Version features plus
 ## Important Links
 
 * [OpenDataDSL Website](https://opendatadsl.com)
-* [OpenDataDSL Documentation](https://opendatadsl.atlassian.net/wiki/spaces/DOCUMENTAT)
-* [OpenDataDSL VSCode extension usage](https://opendatadsl.atlassian.net/wiki/spaces/DOCUMENTAT/pages/33374/Microsoft+VS+Code+Extension)
+* [OpenDataDSL Documentation](https://doc.opendatadsl.com)
+* [OpenDataDSL VSCode extension usage](https://doc.opendatadsl.com/docs/user/vscode)
 
 ## Features of the VSCode extension
 
