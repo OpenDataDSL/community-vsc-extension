@@ -5,7 +5,7 @@
 	"license": "LGPL",
 	"icon": "logo.png",
 	"description": "The development environment for OpenDataDSL (Community Version)",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"private": false,
 	"repository": {
 		"type": "git",
