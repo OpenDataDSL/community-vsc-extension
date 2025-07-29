@@ -2,6 +2,10 @@
 
 All notable changes to the "opendatadsl-community" extension will be documented in this file.
 
+## 0.4.0
+
+* All ODSL changes till end of July
+
 ## 0.1.0
 
 * First minor release
